@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultsActivity">
+
+    <Button
+        android:id="@+id/buttonBackHomeResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Back to Account Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExtensiveCriminalResults" />
+
+    <TextView
+        android:id="@+id/textViewNationalCriminalResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:text="National Criminal Check"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCountyCriminalResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="County Criminal Check"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNationalCriminalResults"
+        app:layout_constraintStart_toStartOf="@+id/textViewNationalCriminalResults"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNationalCriminalResults" />
+
+    <TextView
+        android:id="@+id/textViewGlobalWatchResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Global Watch List Check"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCountyCriminalResults"
+        app:layout_constraintStart_toStartOf="@+id/textViewCountyCriminalResults"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCountyCriminalResults" />
+
+    <TextView
+        android:id="@+id/textViewExtensiveCriminalResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Extensive Criminal Check"
+        app:layout_constraintEnd_toEndOf="@+id/textViewGlobalWatchResults"
+        app:layout_constraintStart_toStartOf="@+id/textViewGlobalWatchResults"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGlobalWatchResults" />
+</androidx.constraintlayout.widget.ConstraintLayout>

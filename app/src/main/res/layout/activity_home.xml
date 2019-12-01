@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/textViewUsernameHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, Username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRequestCheckHome"
+        android:layout_width="275sp"
+        android:layout_height="wrap_content"
+        android:text="Request a Check from a Subject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <Button
+        android:id="@+id/buttonCheckHistoryHome"
+        android:layout_width="275sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="View Recent Check Results"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRequestCheckHome" />
+
+    <TextView
+        android:id="@+id/textViewServiceEmployerHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"
+        android:text="Service Employer Options"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRequestCheckHome"
+        app:layout_constraintStart_toStartOf="@+id/buttonRequestCheckHome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewServiceProviderHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Service Provider Options"
+        app:layout_constraintStart_toStartOf="@+id/buttonRunCheckHome"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCheckHistoryHome" />
+
+    <Button
+        android:id="@+id/buttonRunCheckHome"
+        android:layout_width="275sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Run a Check on Yourself"
+        app:layout_constraintTop_toBottomOf="@+id/textViewServiceProviderHome"
+        tools:layout_editor_absoluteX="68dp" />
+
+    <Button
+        android:id="@+id/buttonSendVerificationHome"
+        android:layout_width="275sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Send Your Verification"
+        app:layout_constraintStart_toStartOf="@+id/buttonRunCheckHome"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRunCheckHome" />
+</androidx.constraintlayout.widget.ConstraintLayout>

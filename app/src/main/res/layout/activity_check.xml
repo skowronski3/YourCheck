@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckActivity">
+
+    <EditText
+        android:id="@+id/editTextFirstNameCheck"
+        android:layout_width="212dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Enter your first name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPasswordLogin"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextLastNameCheck"
+        android:layout_width="212dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Enter your last name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPasswordLogin"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFirstNameCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFirstNameCheck" />
+
+    <TextView
+        android:id="@+id/textViewFirstNameCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="43dp"
+        android:text="First Name"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextFirstNameCheck"
+        app:layout_constraintEnd_toStartOf="@+id/editTextFirstNameCheck"
+        app:layout_constraintTop_toTopOf="@+id/editTextFirstNameCheck" />
+
+    <TextView
+        android:id="@+id/textViewLastNameCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextLastNameCheck"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFirstNameCheck"
+        app:layout_constraintStart_toStartOf="@+id/textViewFirstNameCheck"
+        app:layout_constraintTop_toTopOf="@+id/editTextLastNameCheck" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumberCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="5555555555"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/editTextLastNameCheck"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLastNameCheck" />
+
+    <TextView
+        android:id="@+id/textViewPhoneNumberCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPhoneNumberCheck"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLastNameCheck"
+        app:layout_constraintStart_toStartOf="@+id/textViewLastNameCheck"
+        app:layout_constraintTop_toTopOf="@+id/editTextPhoneNumberCheck" />
+
+    <EditText
+        android:id="@+id/editTextDOBCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="01/01/1969"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPhoneNumberCheck"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumberCheck" />
+
+    <TextView
+        android:id="@+id/textViewDOBCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextDOBCheck"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPhoneNumberCheck"
+        app:layout_constraintStart_toStartOf="@+id/textViewPhoneNumberCheck"
+        app:layout_constraintTop_toTopOf="@+id/editTextDOBCheck" />
+
+    <EditText
+        android:id="@+id/editTextSSNCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="SSN# (hidden)"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDOBCheck"
+        app:layout_constraintStart_toStartOf="@+id/editTextDOBCheck"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDOBCheck" />
+
+    <TextView
+        android:id="@+id/textViewSSNCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Social Security Number"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSSNCheck"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDOBCheck"
+        app:layout_constraintStart_toStartOf="@+id/textViewDOBCheck"
+        app:layout_constraintTop_toTopOf="@+id/editTextSSNCheck" />
+
+    <Button
+        android:id="@+id/buttonSubmitCheck"
+        android:layout_width="270sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Submit Information for Check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSSNCheck" />
+
+    <Button
+        android:id="@+id/buttonCancelCheck"
+        android:layout_width="270sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubmitCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
