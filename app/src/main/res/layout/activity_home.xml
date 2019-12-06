@@ -18,10 +18,11 @@
         android:id="@+id/buttonRequestCheckHome"
         android:layout_width="275sp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Request a Check from a Subject"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="125dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewServiceEmployerHome" />
 
     <Button
         android:id="@+id/buttonCheckHistoryHome"
@@ -37,10 +38,8 @@
         android:id="@+id/textViewServiceEmployerHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
         android:text="Service Employer Options"
-        app:layout_constraintBottom_toTopOf="@+id/buttonRequestCheckHome"
         app:layout_constraintStart_toStartOf="@+id/buttonRequestCheckHome"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,7 +47,7 @@
         android:id="@+id/textViewServiceProviderHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="Service Provider Options"
         app:layout_constraintStart_toStartOf="@+id/buttonRunCheckHome"
         app:layout_constraintTop_toBottomOf="@+id/buttonCheckHistoryHome" />
@@ -59,8 +58,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Run a Check on Yourself"
-        app:layout_constraintTop_toBottomOf="@+id/textViewServiceProviderHome"
-        tools:layout_editor_absoluteX="68dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewServiceProviderHome" />
 
     <Button
         android:id="@+id/buttonSendVerificationHome"
@@ -68,6 +68,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Send Your Verification"
-        app:layout_constraintStart_toStartOf="@+id/buttonRunCheckHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonViewCheckHome" />
+
+    <Button
+        android:id="@+id/buttonViewCheckHome"
+        android:layout_width="275sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="View Your Check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonRunCheckHome" />
 </androidx.constraintlayout.widget.ConstraintLayout>

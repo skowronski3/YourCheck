@@ -6,27 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/textViewEmailRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextEmailRegister"
-        app:layout_constraintEnd_toStartOf="@+id/editTextEmailRegister"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextEmailRegister" />
-
     <EditText
         android:id="@+id/editTextEmailRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="example@example.com"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCreateAccount" />
 
     <EditText
         android:id="@+id/editTextPasswordRegister"
@@ -38,26 +28,6 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmailRegister"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailRegister" />
-
-    <TextView
-        android:id="@+id/textViewPasswordRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextPasswordRegister"
-        app:layout_constraintEnd_toEndOf="@+id/textViewEmailRegister"
-        app:layout_constraintStart_toStartOf="@+id/textViewEmailRegister"
-        app:layout_constraintTop_toTopOf="@+id/editTextPasswordRegister" />
-
-    <TextView
-        android:id="@+id/textViewVerifyPasswordRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Verify Password"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextVerifyPasswordRegister"
-        app:layout_constraintEnd_toEndOf="@+id/textViewPasswordRegister"
-        app:layout_constraintStart_toStartOf="@+id/textViewPasswordRegister"
-        app:layout_constraintTop_toTopOf="@+id/editTextVerifyPasswordRegister" />
 
     <EditText
         android:id="@+id/editTextVerifyPasswordRegister"
@@ -99,5 +69,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textViewRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Register"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a YourCheck Account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
