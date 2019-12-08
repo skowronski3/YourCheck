@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ResultsActivity">
 
+    <ToggleButton
+        android:id="@+id/toggleButtonCountyCriminalResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="ToggleButton"
+        android:textOff="UPGRADE TO VIEW"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCountyCriminalResults"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButtonNationalCriminalResults"
+        app:layout_constraintStart_toStartOf="@+id/toggleButtonNationalCriminalResults"
+        app:layout_constraintTop_toTopOf="@+id/textViewCountyCriminalResults" />
+
     <Button
         android:id="@+id/buttonBackHomeResults"
         android:layout_width="wrap_content"
@@ -21,10 +33,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="National Criminal Check"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUsernameTitleResults" />
 
     <TextView
         android:id="@+id/textViewCountyCriminalResults"
@@ -55,4 +67,66 @@
         app:layout_constraintEnd_toEndOf="@+id/textViewGlobalWatchResults"
         app:layout_constraintStart_toStartOf="@+id/textViewGlobalWatchResults"
         app:layout_constraintTop_toBottomOf="@+id/textViewGlobalWatchResults" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonNationalCriminalResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="ToggleButton"
+        android:textOff="UPGRADE TO VIEW"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNationalCriminalResults"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewNationalCriminalResults" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonGlobalWatchResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOff="UPGRADE TO VIEW"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewGlobalWatchResults"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButtonCountyCriminalResults"
+        app:layout_constraintStart_toStartOf="@+id/toggleButtonCountyCriminalResults"
+        app:layout_constraintTop_toTopOf="@+id/textViewGlobalWatchResults" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonExtensiveCriminalResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOff="UPGRADE TO VIEW"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewExtensiveCriminalResults"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButtonGlobalWatchResults"
+        app:layout_constraintStart_toStartOf="@+id/toggleButtonGlobalWatchResults"
+        app:layout_constraintTop_toTopOf="@+id/textViewExtensiveCriminalResults" />
+
+    <TextView
+        android:id="@+id/textViewTitleResults"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text=" Check Results for:"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewUsernameTitleResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleResults" />
+
+    <TextView
+        android:id="@+id/textViewUsernameResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, Username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

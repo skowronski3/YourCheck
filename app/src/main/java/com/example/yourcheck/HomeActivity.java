@@ -3,6 +3,7 @@ package com.example.yourcheck;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,11 +39,45 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         buttonViewCheckHome = findViewById(R.id.buttonViewCheckHome);
         buttonSendVerificationHome = findViewById(R.id.buttonSendVerificationHome);
 
+        buttonRequestCheckHome.setOnClickListener(this);
+        buttonCheckHistoryHome.setOnClickListener(this);
+        buttonRunCheckHome.setOnClickListener(this);
+        buttonViewCheckHome.setOnClickListener(this);
+        buttonSendVerificationHome.setOnClickListener(this);
+
         textViewUsernameHome.setText("Hello, " + currentUser.getEmail());
     }
 
     @Override
     public void onClick(View view) {
+
+        switch (view.getId()) {
+
+            case R.id.buttonRequestCheckHome:
+                Intent requestIntent = new Intent(this, RequestActivity.class);
+                startActivity(requestIntent);
+                break;
+
+            case R.id.buttonCheckHistoryHome:
+                Intent historyIntent = new Intent(this, HistoryActivity.class);
+                startActivity(historyIntent);
+                break;
+
+            case R.id.buttonRunCheckHome:
+                Intent checkIntent = new Intent(this, CheckActivity.class);
+                startActivity(checkIntent);
+                break;
+
+            case R.id.buttonViewCheckHome:
+                Intent resultsIntent = new Intent(this, ResultsActivity.class);
+                startActivity(resultsIntent);
+                break;
+
+            case R.id.buttonSendVerificationHome:
+                Intent sendIntent = new Intent(this, SendActivity.class);
+                startActivity(sendIntent);
+                break;
+        }
 
     }
 

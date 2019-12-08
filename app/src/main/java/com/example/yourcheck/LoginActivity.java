@@ -51,20 +51,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()) {
 
             case R.id.buttonLoginLogin:
-                mAuth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    //Sign in success, show success message and navigate to the Portal screen
-                                    Toast.makeText(LoginActivity.this, "Logged in!", Toast.LENGTH_SHORT).show();
-                                    startActivity(homeIntent);
-                                } else {
-                                    //If sign in fails, display a message to the user.
-                                    Toast.makeText(LoginActivity.this, "Log in failed, please try again.", Toast.LENGTH_SHORT).show();
+                if (email.equals("") | password.equals(""))
+                    Toast.makeText(this, "Enter credentials.", Toast.LENGTH_SHORT).show();
+                else
+                    mAuth.signInWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        //Sign in success, show success message and navigate to the Portal screen
+                                        Toast.makeText(LoginActivity.this, "Logged in!", Toast.LENGTH_SHORT).show();
+                                        startActivity(homeIntent);
+                                    } else {
+                                        //If sign in fails, display a message to the user.
+                                        Toast.makeText(LoginActivity.this, "Log in failed, please try again.", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
-                            }
-                        });
+                            });
                 break;
 
             case R.id.buttonRegisterLogin:

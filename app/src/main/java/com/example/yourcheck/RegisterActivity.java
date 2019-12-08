@@ -53,7 +53,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()){
 
             case R.id.buttonCreateAccountRegister:
-                    if (password.equals(verifyPassword)){
+
+                if (email.equals("") | password.equals("") | verifyPassword.equals(""))
+                    Toast.makeText(this, "Please fill out all fields.", Toast.LENGTH_SHORT).show();
+                else {
+                    if (password.equals(verifyPassword)) {
                         mAuth.createUserWithEmailAndPassword(email, password)
                                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                                     @Override
@@ -70,6 +74,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                 });
                     } else
                         Toast.makeText(this, "Passwords don't match!", Toast.LENGTH_SHORT).show();
+                }
                 break;
 
             case R.id.buttonLoginRegister:
