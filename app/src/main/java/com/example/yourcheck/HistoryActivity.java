@@ -48,12 +48,12 @@ public class HistoryActivity extends AppCompatActivity implements View.OnClickLi
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("allchecks");
-        myRef.orderByChild("sharedWith").equalTo(currentUser.getEmail().toString()).addChildEventListener(new ChildEventListener() {
+        myRef.orderByChild("sharedWith").equalTo(currentUser.getEmail()).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 Check foundCheck = dataSnapshot.getValue(Check.class);
-                //textViewDisplayHistory.append(foundCheck.userID);
-                Toast.makeText(HistoryActivity.this, foundCheck.userID, Toast.LENGTH_SHORT).show();
+                textViewDisplayHistory.append(foundCheck.userID);
+                //Toast.makeText(HistoryActivity.this, foundCheck.userID, Toast.LENGTH_SHORT).show();
             }
 
             @Override
