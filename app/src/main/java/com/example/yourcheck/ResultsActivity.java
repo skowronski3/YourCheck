@@ -59,7 +59,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         textViewUsernameResults.setText("Hello, " + currentUser.getEmail());
         textViewUsernameTitleResults.setText(currentUser.getEmail());
 
-        myRef.orderByChild("userID").equalTo(currentUser.getEmail().toString()).addChildEventListener(new ChildEventListener() {
+        myRef.orderByChild("userID").equalTo(currentUser.getEmail()).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
